@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+       #content div#main-content h2{
+           color: gray;
+       }
+       #content #main-content>h2 {
+           color: blue;
+       }
+       body #content div[div="main-content"] h2 {
+           color: green;
+       }
+       #main-content div.news-story h2 {
+           color: orange;
+       }
+       #main-content [class="news-story"] h2 {
+           color: yellow;
+       }
+       div#main-content div.news-story h2.first {
+           color: red;
+       }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="main-content">
+            <h2>Hello</h2>
+            <p>哇</p>
+            <div class="news-story">   
+                <h2 class="first">BigBong</h2>
+                <p>嘻嘻</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
