@@ -20,7 +20,7 @@ const Button = ({ color, text }) => {
     return {
         type: 'button',
         props: {
-            className: 'btn btn-${color}',
+            className: `btn btn-${color}`,
             children: {
                 type: 'em',
                 props: {
@@ -53,3 +53,8 @@ var Button = function Button() {
         'Hi'
     )
 };
+
+//ES6 rest/spread 特性
+
+const data = { name: 'foo', value: 'bar'};
+const component = <Conmponent {...data} />
