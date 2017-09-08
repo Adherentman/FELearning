@@ -53,3 +53,4 @@ function Button({ color = 'blue', text = 'Confirm' }) {
         </button>
     );
 }
+
