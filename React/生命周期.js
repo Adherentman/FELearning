@@ -37,3 +37,16 @@ class App extends Component {
         return <div>This is a demo</div>
     }
 }
+
+//组件卸载
+import React, { Component, PropTypes } from 'react';
+
+class App extends Component {
+   componentWillUnmount() {
+    //执行一些清理方法
+   }
+
+    render(){
+        return <div>This is a demo</div>
+    }
+}
