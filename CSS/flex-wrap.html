@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-wrap</title> <style>
+            .box{
+                display: flex;
+                flex-wrap: nowrap
+            }
+            .box1{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box2{
+                display: flex;
+                flex-wrap: wrap-reverse;
+            }
+            .powderblue{
+                width: 100px;
+                height: 100px;
+                background-color: powderblue;
+            }
+            .skyblue{
+                width: 100px;
+                height: 100px;
+                background-color: skyblue;
+            }
+            .steelblue{
+                width: 100px;
+                height: 100px;
+                background-color: steelblue;
+            }
+            p{
+                font-size: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        wrap
+        <div class="box">
+            <div class="powderblue"><p>1</p></div>
+            <div class="skyblue"><p>2</p> </div>
+            <div class="steelblue"><p>3</p></div>
+            <div class="powderblue"><p>4</p></div>
+            <div class="skyblue"><p>5</p></div>
+            <div class="steelblue"><p>6</p></div>
+            <div class="powderblue"><p>7</p></div>
+            <div class="skyblue"><p>8</p></div>
+            <div class="steelblue"><p>9</p></div>
+            <div class="powderblue"><p>10</p></div>
+            <div class="skyblue"><p>11</p></div>
+            <div class="powderblue"><p>13</p></div>
+            <div class="skyblue"><p>14</p></div>
+            <div class="steelblue"><p>15</p></div>
+            <div class="powderblue"><p>16</p></div>
+            <div class="skyblue"><p>17</p></div>
+            <div class="steelblue"><p>18</p></div>
+        </div>
+        <hr>
+        nowrap
+        <div class="box1">
+            <div class="powderblue"><p>1</p></div>
+            <div class="skyblue"><p>2</p> </div>
+            <div class="steelblue"><p>3</p></div>
+            <div class="powderblue"><p>4</p></div>
+            <div class="skyblue"><p>5</p></div>
+            <div class="steelblue"><p>6</p></div>
+            <div class="powderblue"><p>7</p></div>
+            <div class="skyblue"><p>8</p></div>
+            <div class="steelblue"><p>9</p></div>
+            <div class="powderblue"><p>10</p></div>
+            <div class="skyblue"><p>11</p></div>
+            <div class="powderblue"><p>13</p></div>
+            <div class="skyblue"><p>14</p></div>
+            <div class="steelblue"><p>15</p></div>
+            <div class="powderblue"><p>16</p></div>
+            <div class="skyblue"><p>17</p></div>
+            <div class="steelblue"><p>18</p></div>
+        </div>
+        <hr>
+        wrap-reverse
+        <div class="box2">
+            <div class="powderblue"><p>1</p></div>
+            <div class="skyblue"><p>2</p> </div>
+            <div class="steelblue"><p>3</p></div>
+            <div class="powderblue"><p>4</p></div>
+            <div class="skyblue"><p>5</p></div>
+            <div class="steelblue"><p>6</p></div>
+            <div class="powderblue"><p>7</p></div>
+            <div class="skyblue"><p>8</p></div>
+            <div class="steelblue"><p>9</p></div>
+            <div class="powderblue"><p>10</p></div>
+            <div class="skyblue"><p>11</p></div>
+            <div class="powderblue"><p>13</p></div>
+            <div class="skyblue"><p>14</p></div>
+            <div class="steelblue"><p>15</p></div>
+            <div class="powderblue"><p>16</p></div>
+            <div class="skyblue"><p>17</p></div>
+            <div class="steelblue"><p>18</p></div>
+        </div>
+    </body>
+    </html>
