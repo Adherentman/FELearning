@@ -16,7 +16,7 @@ categories: 读书笔记
 
 <!--more-->
 
-![TCP/IP通信传输流](/images/TCP:IP分层.png)
+![TCP/IP通信传输流](http://ozar6ogjb.bkt.clouddn.com/TCPIP%E5%88%86%E5%B1%82.png)
 
 URI, URL, URN
 
