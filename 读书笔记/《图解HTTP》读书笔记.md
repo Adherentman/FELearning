@@ -1,10 +1,10 @@
 ---
-title: TCP/IP协议族
+title: 《图解HTTP》读书笔记
 date: 2017-11-07 14:21
 comments: true
 layout: post
-tags: 网络
-categories: 网络
+tags: 读书笔记
+categories: 读书笔记
 ---
 # TCP/IP协议族
 
@@ -16,7 +16,7 @@ categories: 网络
 
 <!--more-->
 
-![TCP/IP通信传输流](/image/TCP:IP分层)
+![TCP/IP通信传输流](/images/TCP:IP分层.png)
 
 URI, URL, URN
 
@@ -24,4 +24,3 @@ URI, URL, URN
 * URL， URN是URI的子集，除了确定一个资源，还提供一种定位该资源的主要访问机制
 * 换句通俗易懂的话说：
 * URN作用就好像一个人的名字，URL就像一个人的地址。再换句话说：URN确定了东西的身份，URL提供了找到他的方式。
-
