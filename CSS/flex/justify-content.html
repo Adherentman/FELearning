@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>justify-content</title>
+    <style>
+    
+    .powderblue{
+        width: 100px;
+        height: 100px;
+        background-color: powderblue;
+    }
+    .skyblue{
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+    }
+    .steelblue{
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+    }
+    p{
+        font-size: 30px;
+        text-align: center;
+    }
+    .box_one{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .box_two{
+        display: flex;
+        justify-content:flex-end;
+    }
+    .box_three{
+        display: flex;
+        justify-content: space-between;
+    }
+    .box_four{
+        display: flex;
+        justify-content: space-around;
+    }
+    .box_five{
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+</head>
+<body>
+    flex-start
+    <div class="box_one">
+        <div class="powderblue"><p>1</p></div>
+        <div class="skyblue"><p>2</p></div>
+        <div class="steelblue"><p>3</p></div>
+    </div>
+    <hr/>
+    flex-end
+    <div class="box_two">
+        <div class="powderblue"><p>1</p></div>
+        <div class="skyblue"><p>2</p></div>
+        <div class="steelblue"><p>3</p></div>
+    </div>
+    <hr/>
+    space-between
+    <div class="box_three">
+        <div class="powderblue"><p>1</p></div>
+        <div class="skyblue"><p>2</p></div>
+        <div class="steelblue"><p>3</p></div>
+    </div>
+    <hr/>
+    space-around
+    <div class="box_four">
+        <div class="powderblue"><p>1</p></div>
+        <div class="skyblue"><p>2</p></div>
+        <div class="steelblue"><p>3</p></div>
+    </div>
+    <hr/>
+    center
+    <div class="box_five">
+        <div class="powderblue"><p>1</p></div>
+        <div class="skyblue"><p>2</p></div>
+        <div class="steelblue"><p>3</p></div>
+    </div>
+</body>
+</html>
