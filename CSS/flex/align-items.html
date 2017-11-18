@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>align-items</title>
+    <style>
+    
+    .powderblue{
+        min-height: 30px;
+        background-color: powderblue;
+    }
+    .skyblue{
+        min-height: 40px;
+        background-color: skyblue;
+    }
+    .steelblue{
+        min-height: 50px;
+        background-color: steelblue;
+    }
+    .box_one{
+        display: flex;
+        align-items: flex-start;
+        height:200px;
+        width: 240px;
+        background-color: #8c8c8c;
+    }
+    .box_two{
+        display: flex;
+        align-items: flex-end;
+        height:200px;
+        width: 240px;
+        background-color: #8c8c8c;
+    }
+    .box_three{
+        display: flex;
+        align-items: center;
+        height:200px;
+        width: 240px;
+        background-color: #8c8c8c;
+    }
+    .box_four{
+        display: flex;
+        align-items: baseline;
+        height:200px;
+        width: 240px;
+        background-color: #8c8c8c;
+    }
+    .box_five{
+        display: flex;
+        align-items: stretch;
+        height:200px;
+        width: 240px;
+        background-color: #8c8c8c;
+    }
+    div > div {
+        border: 2px solid #8c8c8c;
+        width: 50px;
+    }
+    </style>
+</head>
+<body>
+    flex-start
+    <div class="box_one">
+        <div class="powderblue"></div>
+        <div class="skyblue"></div>
+        <div class="steelblue"></div>
+    </div>
+    <hr/>
+    flex-end
+    <div class="box_two">
+        <div class="powderblue"></div>
+        <div class="skyblue"></div>
+        <div class="steelblue"></div>
+    </div>
+    <hr/>
+    center
+    <div class="box_three">
+        <div class="powderblue"></div>
+        <div class="skyblue"></div>
+        <div class="steelblue"></div>
+    </div>
+    <hr/>
+    baseline
+    <div class="box_four">
+        <div class="powderblue"></div>
+        <div class="skyblue"></div>
+        <div class="steelblue"></div>
+    </div>
+    <hr/>
+    stretch
+    <div class="box_five">
+        <div class="powderblue"></div>
+        <div class="skyblue"></div>
+        <div class="steelblue"></div>
+    </div>
+</body>
+</html>

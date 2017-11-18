@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>align-content</title>
+</head>
+<style>
+div > div {
+  border: 2px solid #8c8c8c;
+  width: 50px;
+  height: 50px;
+  background-color: #a0c8ff;
+}
+#container1 {
+  display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: #8c8c8c;
+  align-content: flex-start;
+}
+#container2 {
+  display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: #8c8c8c;
+  align-content: flex-end;
+}
+#container3 {
+  display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: #8c8c8c;
+  align-content: center;
+}
+#container4 {
+  display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: #8c8c8c;
+  align-content: space-between;
+}
+#container5 {
+  display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: #8c8c8c;
+  align-content: space-around;
+}
+#container6 {
+  display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: #8c8c8c;
+  align-content: stretch;
+}
+</style>
+<body>
+    flex-start
+    <div id="container1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <hr/>
+    flex-end
+    <div id="container2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <hr/>
+    center
+    <div id="container3">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <hr/>
+    space-between
+    <div id="container4">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <hr/>
+    space-around
+    <div id="container5">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <hr/>
+    stretch
+    <div id="container6">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <hr/>
+</body>
+</html>
