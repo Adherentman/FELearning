@@ -22,9 +22,37 @@ function LinkedList(){
             current.next = node;            //{5}
         }
         length++;                           //{6}
-    };                                             
-    this.insert = function(position, element) {};                                   //向列表的特定位置插入一个新的项
-    this.removeAt = function(position) {};                                          //从列表中移除一项
+    };        
+
+    //从列表中移除一项                         
+    this.insert = function(position, element) {};             
+                          
+    //向列表的特定位置插入一个新的项
+    this.removeAt = function(position) {
+        if(position > -1 && position < length){     //{1}
+            let current = head,                     //{2}  
+            previous,                               //{3}
+            index = 0;                              //{4}
+
+            //移除第一项
+            if(position === 0){                     //{5}
+                head = current.next;    
+            } else {
+                while(index++ < position){          //{6}
+                    previous = current;             //{7}
+                    current = current.next;         //{8}
+                }
+            
+            //将previous与current的下一项链接起来：跳过current，从而移除它
+            previous.next = current.next;           //{9}
+            }
+            length--;                               //{10}
+
+            return current.element;
+        } else {
+            return null;                            //{11}
+        }
+    };                                          
     this.remove = function(element) {};                                             //返回元素在列表中的索引，如果列表中没有该元素则返回 -1。
     this.indexOf = function(element) {};                                            //从列表的特定位置移除一项
     this.isEmpty = function() {};                                                   //如果链表中不包含任何元素，返回true。如果链表长度大于0则返回false
