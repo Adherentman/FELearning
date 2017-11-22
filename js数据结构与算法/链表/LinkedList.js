@@ -70,6 +70,7 @@ function LinkedList(){
             //将previous与current的下一项链接起来：跳过current，从而移除它
             previous.next = current.next;           //{9}
             }
+            
             length--;                               //{10}
 
             return current.element;
