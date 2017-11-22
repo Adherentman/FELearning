@@ -25,7 +25,31 @@ function LinkedList(){
     };        
 
     //从列表中移除一项                         
-    this.insert = function(position, element) {};             
+    this.insert = function(position, element) {
+        //检查越界值
+        if(position >= 0 && position <= length){    //{1}
+            let node = new Node(element),
+            current = head,
+            previous,
+            index = 0;
+
+            if(position === 0){                 //在第一个位置添加
+                node.next = current;            //{2}
+                head = node;
+            } else {
+                while(index++ < position){      //{3}
+                    previous = current;
+                    current = current.next;
+                }
+                node.next = current;            //{4}
+                previous.next = node;           //{5}
+            }
+            length++;                           //更新列表长度
+            return true;
+        } else {
+            return false;                       //{6}
+        }
+    };             
                           
     //向列表的特定位置插入一个新的项
     this.removeAt = function(position) {
