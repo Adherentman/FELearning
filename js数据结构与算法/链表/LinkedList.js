@@ -22,9 +22,9 @@ function LinkedList(){
             current.next = node;            //{5}
         }
         length++;                           //{6}
-    };        
+    };
 
-    //从列表中移除一项                         
+    //向列表的特定位置插入一个新的项                   
     this.insert = function(position, element) {
         //检查越界值
         if(position >= 0 && position <= length){    //{1}
@@ -49,9 +49,9 @@ function LinkedList(){
         } else {
             return false;                       //{6}
         }
-    };             
-                          
-    //向列表的特定位置插入一个新的项
+    };
+                        
+    //从列表的特定位置移除一项
     this.removeAt = function(position) {
         if(position > -1 && position < length){     //{1}
             let current = head,                     //{2}  
@@ -70,19 +70,60 @@ function LinkedList(){
             //将previous与current的下一项链接起来：跳过current，从而移除它
             previous.next = current.next;           //{9}
             }
-            
+
             length--;                               //{10}
 
             return current.element;
         } else {
             return null;                            //{11}
         }
-    };                                          
-    this.remove = function(element) {};                                             //返回元素在列表中的索引，如果列表中没有该元素则返回 -1。
-    this.indexOf = function(element) {};                                            //从列表的特定位置移除一项
-    this.isEmpty = function() {};                                                   //如果链表中不包含任何元素，返回true。如果链表长度大于0则返回false
-    this.size = function() {};                                                      //返回链表包含的元素个数。
-    this.getHead = function() {};                                                   //拿到第一个值
-    this.toString = function() {};                                                  //让其只输出元素的值
-    this.print = function() {};                                                     //打印这个链表
+    };          
+
+    //从列表移除一项
+    this.remove = function(element) {
+        let index = this.indexOf(element);
+        return this.removeAt(index);
+    };          
+
+    //返回元素在列表中的索引，如果列表中没有该元素则返回 -1。
+    this.indexOf = function(element) {
+        let current = head,                         //{1}
+        index = -1;
+
+        while (current) {
+            if(element === current.element){
+                return index;
+            }
+            index++;
+            current = current.next;
+        }
+        return -1;
+    };
+    
+    //如果链表中不包含任何元素，返回true。如果链表长度大于0则返回false
+    this.isEmpty = function() {
+        return length === 0;
+    };      
+    
+    //返回链表包含的元素个数。
+    this.size = function() {
+        return length;
+    };
+    
+    //拿到第一个值
+    this.getHead = function() {
+        return head;
+    };                    
+
+    //让其只输出元素的值
+    this.toString = function() {
+        let current = head,                         //{1}
+        string = '';                                //{2}
+        
+        while(current){                             //{3}
+            string += current.element + (current.next ? 'n' : '');      //{4}
+            current = current.next;
+        }
+        return string;
+    };
 }
