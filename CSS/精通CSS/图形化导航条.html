@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>图形化导航条</title>
+  <style>
+    ul.nav {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 72em;
+      background: #FAA819 url(../../images/mainNavBg.gif) repeat-x;
+      overflow: hidden;
+    }
+
+    ul.nav li {
+      float: left;
+    }
+
+    ul.nav a {
+      display: block;
+      padding: 0 3em;
+      line-height: 2.1em;
+      text-decoration: none;
+      color: #fff;
+      background: url(../../images/divider.gif) repeat-y left top;
+    }
+
+    ul.nav .first a{
+      background-image: none;
+    }
+
+    ul.nav a:hover,
+    ul.nav a:focus {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="first"><a href="home.htm">Home</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="services.htm">Our Services</a></li>
+        <li><a href="work.htm">Our Work</a></li>
+        <li><a href="news.htm">News</a></li>
+        <li class="last"><a href="contact.htm">Contact</a></li>
+      </ul>
+</body>
+</html>

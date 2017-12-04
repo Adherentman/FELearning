@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>"滑动门"标签页式导航</title>
+
+  <style>
+    ul.nav {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 72em;
+      overflow: hidden;
+    }
+
+    ul.nav li {
+      float: left;
+      background: url(../../images/tab-right.gif) no-repeat right top;
+    }
+
+    ul.nav li a{
+      display: block;
+      padding: 0 2em;
+      line-height: 2.5em;
+      background: url(../../images/tab-left.gif) no-repeat left top;
+      text-decoration: none;
+      color: #fff;
+      float: left;
+    }
+
+    ul.nav a:hover,
+    ul.nav a:focus {
+      color:#333;
+    }
+  </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="first"><a href="home.htm">Home</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="services.htm">Our Services</a></li>
+        <li><a href="work.htm">Our Work</a></li>
+        <li><a href="news.htm">News</a></li>
+        <li class="last"><a href="contact.htm">Contact</a></li>
+      </ul>
+</body>
+</html>

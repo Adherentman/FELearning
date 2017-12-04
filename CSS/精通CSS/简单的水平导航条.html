@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>简单的水平导航条</title>
+
+  <style>
+    ol.pagination {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    ol.pagination li {
+      float: left;
+      margin-right: 0.6em;
+    }
+
+    ol.pagination a,
+      ol.pagination li.selected {
+        display: block;
+        padding: 0.2em 0.5em;
+        border: 1px solid #ccc;
+        text-decoration: none;
+      }
+    
+    ol.pagination a:hover,
+    ol.pagination a:focus,
+    ol.pagination li.selected {
+      background-color: blue;
+      color: white;
+    }
+
+    ol.pagination a[rel="prev"],
+    ol.pagination a[rel="next"] {
+      border: none;
+    }
+
+    ol.pagination a[rel="prev"]:before {
+      content: "\00AB";
+      padding-right: 0.5em
+    }
+
+    ol.pagination a[rel="next"]:after {
+      content: "\00BB";
+      padding-right: 0.5em
+    }
+  </style>
+</head>
+<body>
+  <ol class="pagination">
+    <li><a href="search.html?page=1" rel="prev">Prev</a></li>
+    <li><a href="search.html?page=1">1</a></li>
+    <li class="selected">2</li>
+    <li><a href="search.html?page=3">3</a></li>
+    <li><a href="search.html?page=4">4</a></li>
+    <li><a href="search.html?page=3" rel="next">Next</a></li>
+  </ol>
+</body>
+</html>
