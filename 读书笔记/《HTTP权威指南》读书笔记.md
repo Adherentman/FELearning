@@ -1,6 +1,8 @@
+# 《HTTP权威指南》读书笔记
+
 ## URL语法
 
-```
+```html
 <scheme> :// <user> : <password> @ <host> : <port> / <path>; <params> ? <query> # <frag>
 ```
 
@@ -230,4 +232,3 @@ Web服务器做什么
 * 记录事务处理过程
 
 ![Web服务器做什么](http://ozar6ogjb.bkt.clouddn.com/Web%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BC%9A%E5%81%9A%E4%BB%80%E4%B9%88.jpeg)
-
