@@ -9,13 +9,13 @@
 * toFixed()  带有多少位小数
 * toPrecision()  有多少有效数字去显示这个值
 
-```
+```JavaScript
 var a = 5E10;
 a;					// 50000000000
 a.toExponential();	// "5e+10"
 ```
 
-```
+```JavaScript
 var a = 42.59;
 
 a.toFixed( 0 ); // "43"
@@ -25,7 +25,7 @@ a.toFixed( 3 ); // "42.590"
 a.toFixed( 4 ); // "42.5900"
 ```
 
-```
+```JavaScript
 var a = 42.59;
 
 a.toPrecision( 1 ); // "4e+1"
@@ -40,7 +40,7 @@ a.toPrecision( 6 ); // "42.5900"
 
 `.` 在数字中代表的是在这之后为小数，而在js里它代表了引用，所以下面这样会导致错误：
 
-```
+```JavaScript
 42.toFixed(3); 			//SyntaxError
 //我们需要这样写
 
@@ -62,13 +62,13 @@ a.toPrecision( 6 ); // "42.5900"
 
 ### `void`操作符
 
-```
+```JavaScript
 console.log(void a); //	undefined
 ```
 
 `NaN`是一种“哨兵值”（一个被赋予了特殊意义的普通的值），它代表`number`集合内的一种特殊的错误情况。这种错误情况实质上是：“我试着进行数学操作但是失败了，而这就是失败的`number`结果。”
 
-```
+```JavaScript
 var a = 2 / "foo";
 
 a == NaN;	// false
@@ -77,7 +77,7 @@ a === NaN;	// false
 
 检测是否为NaN：
 
-```
+```JavaScript
 var a = 2 / "foo";
 var b = "foo";
 
@@ -96,7 +96,7 @@ Number.isNaN( b ); // false -- 咻!
 
 在ES6中，有一个新工具可以用于测试两个值的绝对等价性，而没有任何这些例外。它称为`Object.is(..)`:
 
-```
+```JavaScript
 var a = 2 / "foo";
 var b = -3 * 0;
 
@@ -108,7 +108,7 @@ Object.is( b, 0 );		// false
 
 ### 使用`toString()`检测对象类型
 
-```
+```JavaScript
 Object.prototype.toString.call( "abc" );	// "[object String]"
 Object.prototype.toString.call( 42 );		// "[object Number]"
 Object.prototype.toString.call( true );		// "[object Boolean]"
@@ -116,7 +116,7 @@ Object.prototype.toString.call( true );		// "[object Boolean]"
 
 
 
-```
+```JavaScript
 var a = new Array( 3 );
 var b = [ undefined, undefined, undefined ];
 var c = [];
@@ -139,7 +139,7 @@ JavaScript为基本类型提供了对象包装器，被称为原生类型（`Str
 
 两种强制转换的方式：
 
-```
+```JavaScript
 var a = 42;
 
 var b = a + "";			// 隐含强制转换
@@ -159,7 +159,7 @@ var c = String( a );	// 明确强制转换
 
 * `JSON.stringify(value[, replacer [, space]])`
 
-  * ```
+  * ```JavaScript
     JSON.stringify( 42 );	// "42"
     JSON.stringify( "42" );	// ""42"" （一个包含双引号的字符串）
     JSON.stringify( null );	// "null"
@@ -170,7 +170,7 @@ var c = String( a );	// 明确强制转换
 
 * `ToBoolean`
 
-  * ```
+  * ```JavaScript
     var a = {
     	valueOf: function(){
     		return "42";
@@ -215,7 +215,7 @@ var c = String( a );	// 明确强制转换
 
 
 
-```
+```JavaScript
 var a = "false";
 var b = "0";
 var c = "''";
@@ -230,7 +230,7 @@ d;		//true
 
 再来看一个
 
-```
+```JavaScript
 var a = [];				// 空数组 -- truthy 还是 falsy?
 var b = {};				// 空对象 -- truthy 还是 falsy?
 var c = function(){};	// 空函数 -- truthy 还是 falsy?
@@ -244,7 +244,7 @@ d;			//true
 
 string  <--> number
 
-```
+```JavaScript
 var a = 42;
 var b = String( a );
 
@@ -257,7 +257,7 @@ d; // 3.14
 
 一元`+`是一个 *明确的* 强制转换形式
 
-```
+```JavaScript
 var b = 5.14;
 var c = 5 + +b;
 c;		//10.14
@@ -267,7 +267,7 @@ c;		//10.14
 
 ### ~
 
-```
+```JavaScript
 var b = ~~49.55555;
 b;		//49
 
@@ -286,7 +286,7 @@ Math.floor( -49.8888 );	// -50
 
 `!!`双否定操作符进行`boolean`强制转换，因为第二个`!`将会把它翻转回原本的true或false：
 
-```
+```JavaScript
 var a = "0";
 var b = [];
 var c = {};
@@ -308,21 +308,21 @@ var g;
 
 
 
-```
+```JavaScript
 var a = 42;
 var b = a + "";
 
 b; // "42"
 ```
 
-```
+```JavaScript
 var a = "3.14";
 var b = a - 0;
 
 b; // 3.14
 ```
 
-```
+```JavaScript
 var a = [3];
 var b = [1];
 
@@ -337,7 +337,7 @@ a - b; // 2
 
 相反地，对于`&&`操作符，如果测试结果为`true`，`&&`表达式将 *第二个操作数* 的值（`b`）作为结果。如果测试结果为`false`，那么`&&`表达式就将 *第一个操作数* 的值（`a`或`c`）作为结果。
 
-```
+```JavaScript
 a || b;
 // 大体上等价于：
 a ? a : b;
@@ -364,7 +364,7 @@ a ? b : a;
 
 
 
-```
+```JavaScript
 42 == "43";							// false
 "foo" == 42;						// false
 "true" == true;						// false
@@ -375,7 +375,7 @@ a ? b : a;
 
 
 
-```
+```JavaScript
 "0" == false;			// true -- 噢！
 false == 0;				// true -- 噢！
 false == "";			// true -- 噢！
@@ -389,7 +389,7 @@ false == [];			// true -- 噢！
 
 
 
-```
+```JavaScript
 "" == 0;				// true -- 噢！
 "" == [];				// true -- 噢！
 0 == [];				// true -- 噢！
@@ -402,7 +402,7 @@ false == [];			// true -- 噢！
 
 ## 文法
 
-```
+```JavaScript
 var a = 3 * 6;		//声明语句（declaration statments）
 var b = a;			//赋值语句（assignment expressions）
 b;					//赋值表达式（expression statement）
@@ -426,3 +426,163 @@ b;					//赋值表达式（expression statement）
 优先级
 
 `&&` > `||` > `?:`
+
+## 异步
+
+### 回调
+
+首先，我们的大脑用顺序的，阻塞的，单线程的语义方式规划事情，但是回调使用非线性，非顺序的方式表达异步流程，这使我们正确推理这样的代码变得非常困难。不好推理的代码是导致不好的Bug的不好的代码。
+
+我们需要一个种方法，以更同步化，顺序化，阻塞的方式来表达异步，正如我们的大脑那样。
+
+细节：
+
+```JavaScript
+function addNumbers(x,y) {
+	// + 操作符使用强制转换重载为字符串连接
+	// 所以根据传入参数的不同，这个操作不是严格的安全。
+	return x + y;
+}
+
+addNumbers( 21, 21 );	// 42
+addNumbers( 21, "21" );	// "2121"
+
+//这样是不是太不安全了？？
+
+//我们可以这样：
+
+function addNumbers(x, y) {
+  if(typeof x != "number" || typeof y != "number){
+    throw Error("不是number");
+  }
+  return x + y;
+}
+
+//甚至我们可以这样：
+
+function addNumbers(x, y) {
+  x = Number(x);
+  y = Number(y);
+
+  return x + y;
+}
+
+```
+所以在回调中我们应该也要做出很多判断：
+
+```JavaScript
+
+function timeoutify(fn,delay) {
+	var intv = setTimeout( function(){
+			intv = null;
+			fn( new Error( "Timeout!" ) );
+		}, delay )
+	;
+
+	return function() {
+		// 超时还没有发生？
+		if (intv) {
+			clearTimeout( intv );
+			fn.apply( this, [ null ].concat( [].slice.call( arguments ) ) );
+		}
+	};
+}
+
+// 使用“错误优先”风格的回调设计
+function foo(err,data) {
+	if (err) {
+		console.error( err );
+	}
+	else {
+		console.log( data );
+	}
+}
+
+ajax( "http://some.url.1", timeoutify( foo, 500 ) );
+```
+
+```javascript
+var p3 = new Promise( function(resolve,reject){
+	resolve( "B" );
+} );
+
+var p1 = new Promise( function(resolve,reject){
+	resolve( p3 );
+} );
+
+var p2 = new Promise( function(resolve,reject){
+	resolve( "A" );
+} );
+
+p1.then( function(v){
+	console.log( v );
+} );
+
+p2.then( function(v){
+	console.log( v );
+} );
+
+// A B  <-- 不是你可能期望的 B A
+
+```
+
+思考下以下代码有没有方法能写得更好？
+```javascript
+var p = Promise.resolve( 21 );
+
+var p2 = p.then( function(v){
+	console.log( v );	// 21
+
+	// 使用值`42`完成`p2`
+	return v * 2;
+} );
+
+// 在`p2`后链接
+p2.then( function(v){
+	console.log( v );	// 42
+} );
+
+var p = Promise.resolve( 21 );
+
+p
+.then( function(v){
+	console.log( v );	// 21
+
+	// 使用值`42`完成被链接的promise
+	return v * 2;
+} )
+// 这里是被链接的promise
+.then( function(v){
+	console.log( v );	// 42
+} );
+```
+### Promise API概览
+
+* new Promise(..)构造器
+
+  ```javascript
+    var p = new Promise( function(resolve,reject){
+    // `resolve(..)`给解析/完成的promise
+    // `reject(..)`给拒绝的promise
+    } );
+  ```
+* Promise.resolve(..) 和 Promise.reject(..)
+  ```javascript
+  var p1 = new Promise( function(resolve,reject){
+	reject( "Oops" );
+  } );
+
+  var p2 = Promise.reject( "Oops" );
+  ```
+* then(..) 和 catch(..)
+  ```javascript
+  p.then( fulfilled );
+
+  p.then( fulfilled, rejected );
+
+  p.catch( rejected ); // 或者`p.then( null, rejected )`
+  ```
+* Promise.all([ .. ]) 和 Promise.race([ .. ])
+  > 对于Promise.all([ .. ])，为了被返回的promise完成，所有你传入的promise都必须完成.
+  >
+  > 对于Promise.race([ .. ])，只有第一个解析（成功或拒绝）的promise会“胜出”，而且不论解析的结果是什么，都会成为被返回的promise的解析结果。
