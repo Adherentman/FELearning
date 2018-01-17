@@ -118,3 +118,39 @@ font: 100%/1.5 sans-serif;
 
 ![](http://ozar6ogjb.bkt.clouddn.com/%E8%BE%B9%E6%A1%86%E5%86%85%E5%9C%86%E8%A7%92.png)
 
+### 条纹背景
+
+`background: linear-gradient()`
+
+![](http://ozar6ogjb.bkt.clouddn.com/%E6%9D%A1%E7%BA%B9%E8%83%8C%E6%99%AF%E6%A8%AA.png)
+
+垂直条纹：
+
+```css
+background: linear-gradient(to right/*或者 90deg*/, #fb3 50%, #58a 0);
+background-size: 30px 100%;
+```
+
+![](http://ozar6ogjb.bkt.clouddn.com/%E5%9E%82%E7%9B%B4%E6%9D%A1%E7%BA%B9.png)
+
+斜向条纹：
+
+知道了垂直条纹如何实现，那么我们可以推出斜向条纹如何实现啦！
+
+```css
+background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+background-size: 30px 30px;
+```
+
+![](http://ozar6ogjb.bkt.clouddn.com/%E6%9D%A1%E7%BA%B9%E6%96%9C45deg.png)
+
+SVG实现棋盘效果在css中：
+
+```css
+background: #eee url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".25" >\
+            <rect x="50" width="50" height="50" />\
+            <rect y="50" width="50" height="50" />\
+            </svg>');
+background-size: 30px 30px;
+```
